@@ -35,20 +35,33 @@
 
 ## 실행 결과
 
+   > 시작 화면, 메인 화면, 도움말
+   
+   <p>
+      <img src="/screenshots/screenshot_26.png" alt="Welcome screen" width="250px">
+      <img src="/screenshots/screenshot_27.png" alt="Main screen" width="250px">
+      <img src="/screenshots/screenshot_28.png" alt="Help screen" width="250px">
+   </p>
+   
+   
+   > 암호화, 복호화 화면
+   
+   <p>
+      <img src="/screenshots/screenshot_29.png" alt="Sample shot of encrypting" width="250px">
+      <img src="/screenshots/screenshot_30.png" alt="Sample shot of decrypting" width="250px">
+   </p>
+   
+   > 데이터 손상 시
+   
+   <p>
+      <img src="/screenshots/screenshot_31.png" alt="Sample shot of error 1" width="250px">
+      <img src="/screenshots/screenshot_32.png" alt="Sample shot of error 2" width="250px">
+   </p>
+   
+   > 결과 로그
+   
+   <p>
+      <img src="/screenshots/screenshot_33.png" alt="Convert log" width="250px">
+   </p>
 
-
-## 보완할 점
-
-1. 구현 도중 제외한 기능
-
-   1. 서버
-
-      AWS를 이용하여 서버 상에서 암호 메시지를 처리하는 것이 목표였습니다. JavaScript 코드를 웹브라우저에 노출시키지 않고 서버단 JavaScript에서 처리하여 보안성을 높이려고 했으나, 개발기간이 부족하고 프로그램 제출이 힘들다는 점을 들어 제외했습니다.
-
-2. 보강할 기능
-
-   1. 사용자 기반 암호화
-
-      암호 메시지에 로그인을 하면 비밀번호를 만들 필요 없이 본인과 초대한 사람에 한해 자동으로 암호화 및
-      복호화를 진행하는 기능을 추가하면 좋을 것 같습니다.
 
