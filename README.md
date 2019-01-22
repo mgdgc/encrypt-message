@@ -1,5 +1,7 @@
 # 암호 메시지
 
+<img src="res/app_icon.png" alt="App icon" width="250px">
+
 1학년 1학기 기초프로그래밍 기말 프로젝트
 
 ## 배경 및 동기
