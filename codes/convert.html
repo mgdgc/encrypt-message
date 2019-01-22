@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic">
+    <link rel="stylesheet" type="text/css" href="convert.css">
+    <title>암호 메시지</title>
+</head>
+
+<body>
+    <h1>암호 메시지</h1>
+    <div>
+        <p id="p_ex" style="margin: 24px">
+            변환 할 메시지와 비밀번호를 입력하고 '암호화/ 복호화' 버튼을 클릭하세요.
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong id="label_input" style="color: cadetblue">입력</strong><br>
+            <textarea type="text" id="input_message" placeholder="암호화할 메시지를 입력하세요" cols="50" rows="10"></textarea>
+        </p>
+        <p id="options">
+            <input type="checkbox" id="cb_show_pw">
+            <label for="cb_show_pw">비밀번호 보기</label>
+            <input type="checkbox" id="cb_strict_mode">
+            <label for="cb_strict_mode">엄격 모드</label>
+        </p>
+        <p>
+            <label id="label_pw" for="password">비밀번호</label>
+            <input type="password" id="password" style="border: 1px solid lightGrey">
+            <button id="btn_convert">암호화/ 복호화</button>
+            <button id="btn_help">?</button>
+        </p>
+        <p>
+            <strong id="label_output" style="color: coral">결과</strong><br>
+            <textarea type="text" id="output_message" cols="50" rows="10" readonly="true"></textarea>
+        </p>
+        <p>
+            <input type="checkbox" id="cb_show_log">
+            <label for="cb_show_log">결과 로그 표시</label>
+            <br><textarea type="text" id="output_log" cols="50" rows="5" readonly="true" hidden="true"></textarea>
+        </p>
+    </div>
+    
+    <!--하단 정보 표시 부분-->
+    <div id="div_footer" style="color: darkgray; font-size: 12px; margin-top: 24px;">
+        <p id="p_footer">기초프로그래밍 4분반 | IT계열 18학번 최명근 (20185301)
+        <br>010-9452-0550 | soc06212@gmail.com
+        <br></p>
+    </div>
+    
+    <!--알림창-->
+    <div id="div_popup_bg" hidden="true"></div>
+    <div id="div_popup" hidden="true">
+        <h2 id="popup_title">Title</h2>
+        <p id="popup_message" style="color: dimgray">This is an example of popup message. Message's going to show up here.<br>This shows what if content is too long.</p>
+        <button id="popup_close">닫기</button>
+    </div>
+    
+    <!--도움말-->
+    <div id="div_help" style="width: 100%; position: absolute; top: 0; left: 0; background: #fff;" hidden="hidden">
+        <h1 id="help_title" style="position: fixed; left: 0; top: 0; width: 100%;">도움말</h1>
+        <p style="margin-top: 100px">암호 메시지를 사용하기 앞서 사용 방법에 대해 안내해 드리겠습니다.</p>
+        
+        <h3 style="text-align: center; color: cadetblue">암호화</h3>
+        
+        <h4 style="text-align: center; margin-left: 24px; margin-right: 24px">1. 입력 창에 암호화 할 메시지를 입력합니다.</h4>
+        <p><img src="res/1.png" width="300px"></p><br>
+        
+        <h4 style="text-align: center; margin-left: 24px; margin-right: 24px">2. 암호화에 사용할 비밀번호를 입력한 후 '암호화/ 복호화' 버튼을 클릭합니다.</h4>
+        <p><img src="res/2.png" width="300px"></p><br>
+        
+        <h4 style="text-align: center; margin-left: 24px; margin-right: 24px">3. 결과 창에 암호화된 메시지가 출력됩니다.</h4>
+        <p>(출력되는 값은 비밀번호를 알고 있는 사람에게 전송하십시오.)</p>
+        <p><img src="res/3.png" width="300px"></p><br>
+        
+        <h3 style="text-align: center; color: coral">복호화</h3>
+        
+        <h4 style="text-align: center; margin-left: 24px; margin-right: 24px">1. 입력 창에 복호화 할 메시지를 입력합니다.</h4>
+        <p><img src="res/4.png" width="300px"></p><br>
+        
+        <h4 style="text-align: center; margin-left: 24px; margin-right: 24px">2. 복호화 사용할 비밀번호를 입력한 후 '암호화/ 복호화' 버튼을 클릭합니다.</h4>
+        <p><img src="res/2.png" width="300px"></p><br>
+        
+        <h4 style="text-align: center; margin-left: 24px; margin-right: 24px">3. 결과 창에 암호화된 메시지가 출력됩니다.</h4>
+        <p><img src="res/5.png" width="300px"></p><br>
+        
+        <h4 style="text-align: center; margin-left: 24px; margin-right: 24px">3-1. 만약 도중에 메시지가 온전하지 않게 전송된다면 복호화를 진행하지 않습니다.</h4>
+        <p><img src="res/7.png" width="300px"></p><br>
+        
+        <p id="p_help_close">도움말 닫기</p>
+    </div>
+    <script type="text/javascript" src="convert.js"></script>
+</body>
+
+</html>
